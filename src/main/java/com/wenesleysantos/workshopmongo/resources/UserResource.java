@@ -1,8 +1,6 @@
 package com.wenesleysantos.workshopmongo.resources;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +23,7 @@ public class UserResource {
 	public ResponseEntity<List<User>> findAll(){
 		
 		List<User> list = service.findAll();
-		return ResponseEntity.ok(list);
+		return ResponseEntity.ok().body(list);
 	}
 
 }
